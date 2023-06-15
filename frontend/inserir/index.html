@@ -10,7 +10,8 @@
     <h1>Insira sua mensagem</h1>
     <input type="text" id="texto">
     <button id="enviar">Enviar</button><br>
-    <a href="/">Voltar</a>
+    <a href="/">Voltar</a> <br><br>
+    <div id="feedback"></div>
 
     <script>
         $("#enviar").on('click', function () {
@@ -30,6 +31,8 @@
                 .then(data => {
                     console.log(data)
                 });
+            
+            document.getElementById('feedback').innerHTML = "<p>Mensagem enviada com sucesso!</p>";
         });
     </script>
 </body>

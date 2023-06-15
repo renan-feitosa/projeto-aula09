@@ -12,7 +12,7 @@ app.use(express.json())
 
 app.post('/enviar_mensagem', (req, res) => {
     var db = new sqlite3.Database(PATH);
-	sql = "INSERT INTO Tbl_Mensagem (MENSAGEM) VALUES ('" + req.body.mensagem + "')";
+	var sql = "INSERT INTO Tbl_Mensagem (MENSAGEM) VALUES ('" + req.body.mensagem + "')";
 	console.log(sql);
 	db.run(sql, [], err => {
 		if (err) {
